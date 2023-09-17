@@ -7,7 +7,6 @@ export default async () => {
   const wixClient = createClient({
     modules: { dataItems },
     auth: OAuthStrategy({ clientId: config.wixClientId }),
-    //auth: OAuthStrategy({ clientId: "83775847-e53f-436e-8e83-2ff173c4cefe" }),
   });
 
   const tokens = await wixClient.auth.generateVisitorTokens();
